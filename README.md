@@ -1,6 +1,5 @@
 # DesktopDB
 
-## Summary
 Desktop Database (DesktopDB) is a simple and lightweight GUI application that allows flat files (excel and csv) to be converted into desktop databases (parquet files) that can be queried and appended to. With DesktopDB, technical and non-technical users are enabled to harness the power of Python to instill good data practices and unlock a wider range of analysis, like historical analysis.
 
 The following can be done with flat files:
