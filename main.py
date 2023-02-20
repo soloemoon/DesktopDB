@@ -9,7 +9,7 @@ from PyQt6.QtWidgets import (
     QLabel,
     QGridLayout, 
     QWidget, 
-    QLineEdit
+    QLineEdit,
 )
 import polars as pl
 import os
@@ -138,11 +138,10 @@ class DesktopDB(QWidget):
                 df = file_concat()
                 dfp = pl.read_parquet(pfile[0])
                 dfp = pl.concat([dfp, df],  how = 'diagonal')
-                dfp.write_parquet(pfile[0)
+                dfp.write_parquet(pfile[0])
 
 if __name__ == '__main__':
-    appctxt = ApplicationContext()       # 1. Instantiate ApplicationContext
-    
+    appctxt = ApplicationContext()
     app = QApplication([])
     app.setStyleSheet(
         '''
@@ -158,7 +157,6 @@ if __name__ == '__main__':
 
     DesktopDB = DesktopDB()
     DesktopDB.show()
-    
     
     exit_code = appctxt.app.exec()      # 2. Invoke appctxt.app.exec()
     sys.exit(exit_code)
