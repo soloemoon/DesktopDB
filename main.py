@@ -8,16 +8,12 @@ from PyQt6.QtWidgets import (
     QComboBox, 
     QLabel,
     QGridLayout, 
-    QVBoxLayout, 
     QWidget, 
-    QLineEdit,
-    QTabWidget
+    QLineEdit
 )
 import polars as pl
 import os
 from os.path import isfile, join, realpath
-import duckdb
-import re
 from datetime import datetime
 import sys
 
@@ -142,10 +138,7 @@ class DesktopDB(QWidget):
                 df = file_concat()
                 dfp = pl.read_parquet(pfile[0])
                 dfp = pl.concat([dfp, df],  how = 'diagonal')
-                dfp.write_parquet(pfile)
-                print(pfile)
-
-import sys
+                dfp.write_parquet(pfile[0)
 
 if __name__ == '__main__':
     appctxt = ApplicationContext()       # 1. Instantiate ApplicationContext
